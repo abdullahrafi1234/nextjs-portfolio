@@ -6,6 +6,7 @@ import { useState } from "react";
 const navLinks = [
   { label: "Home", href: "#top" },
   { label: "About", href: "#about" },
+  { label: "Experience", href: "#experience" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Contact", href: "#contact" },
@@ -17,11 +18,17 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-bg/80 backdrop-blur-md">
       <nav className="relative mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a
-          href="#top"
-          className="font-display text-lg font-semibold text-text-primary"
-        >
-          Rafi<span className="text-accent">.</span>
+        <a href="#top" className="flex items-center gap-1">
+          {/* <Image
+            src="/logo.png"
+            alt="Rafi logo"
+            width={36}
+            height={36}
+            className="object-contain"
+          /> */}
+          <span className="font-serif text-2xl font-bold tracking-wide text-text-primary">
+            R_AFI
+          </span>
         </a>
 
         <ul className="hidden gap-8 font-mono text-sm text-text-muted sm:absolute sm:left-1/2 sm:flex sm:-translate-x-1/2">

@@ -15,8 +15,8 @@ export const projects: Project[] = [
       "PostgreSQL",
       "Prisma",
     ],
-    liveUrl: "", // Live Link বসাও
-    githubUrl: "", // Frontend/Backend repo link বসাও
+    liveUrl: "https://platterly-frontend.vercel.app/", // Live Link বসাও
+    githubUrl: "https://github.com/abdullahrafi1234/platterly-frontend", // Frontend/Backend repo link বসাও
     featured: true,
     highlights: [
       "Cart, checkout & multiple payment options (COD, SSLCommerz, Stripe)",
@@ -40,8 +40,8 @@ export const projects: Project[] = [
       "MongoDB",
       "Firebase",
     ],
-    liveUrl: "",
-    githubUrl: "",
+    liveUrl: "https://fly-point-53b64.web.app/",
+    githubUrl: "https://github.com/abdullahrafi1234/flyPoint-client",
     featured: true,
     highlights: [
       "Parcel booking & real-time delivery tracking",
@@ -64,8 +64,8 @@ export const projects: Project[] = [
       "MongoDB",
       "Firebase",
     ],
-    liveUrl: "",
-    githubUrl: "",
+    liveUrl: "https://eleven-assignment-4cccf.web.app/",
+    githubUrl: "https://github.com/abdullahrafi1234/foody-client",
     featured: false,
     highlights: [
       "Detailed food/restaurant listings with images & pricing",
