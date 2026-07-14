@@ -9,7 +9,7 @@ const infoRows = [
 
 export function About() {
   return (
-    <section id="about" className="px-6 py-24">
+    <section id="about" className="px-6 py-8">
       <div className="mx-auto max-w-5xl">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
           {/* Left: heading + description + CV button */}

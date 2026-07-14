@@ -26,7 +26,7 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="px-6 py-24">
+    <section id="contact" className="px-6 py-8">
       <div className="mx-auto max-w-5xl">
         <SectionHeading
           eyebrow="Contact Me"

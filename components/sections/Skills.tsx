@@ -14,7 +14,7 @@ export function Skills() {
   const track = [...allSkills, ...allSkills]; // seamless loop এর জন্য duplicate
 
   return (
-    <section id="skills" className="px-6 py-24">
+    <section id="skills" className="px-6 py-8">
       <div className="mx-auto max-w-5xl">
         <SectionHeading
           eyebrow="My Skills"

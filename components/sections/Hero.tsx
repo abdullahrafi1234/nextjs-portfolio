@@ -10,7 +10,7 @@ import Image from "next/image";
 
 export function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden px-6 py-24 sm:py-32">
+    <section id="top" className="relative overflow-hidden px-6 py-8 sm:py-12">
       <div className="star-field pointer-events-none absolute inset-0" />
 
       <div className="relative mx-auto grid max-w-6xl items-center gap-16 lg:grid-cols-2">

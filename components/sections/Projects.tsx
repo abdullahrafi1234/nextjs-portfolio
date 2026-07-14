@@ -11,7 +11,7 @@ import Link from "next/link";
 
 export function Projects() {
   return (
-    <section id="projects" className="px-6 py-24">
+    <section id="projects" className="px-6 py-8">
       <div className="mx-auto max-w-5xl">
         <div className="mb-12 flex flex-wrap items-end justify-between gap-4">
           <SectionHeading eyebrow="My Projects" title="Featured Projects" />
