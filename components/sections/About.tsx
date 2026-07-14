@@ -1,31 +1,68 @@
-import { SectionHeading } from "@/components/ui/SectionHeading";
-import { journeySteps } from "@/lib/data/journey";
+import { Button } from "@/components/ui/Button";
+import { Circle, Mail, MapPin, User } from "lucide-react";
+
+const infoRows = [
+  { icon: User, label: "Name", value: "Abdullah Al Rafi Bhuiyan" },
+  { icon: Mail, label: "Email", value: "rafibhuiyan1234@gmail.com" },
+  { icon: MapPin, label: "Location", value: "Mohammadpur, Dhaka" },
+];
 
 export function About() {
   return (
     <section id="about" className="px-6 py-24">
       <div className="mx-auto max-w-5xl">
-        <SectionHeading
-          eyebrow="01 — About"
-          title="From proofs to production code"
-          description="A Mathematics background taught me to think in structures and systems — web development gave me the tools to build them."
-        />
+        <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
+          {/* Left: heading + description + CV button */}
+          <div>
+            <span className="font-mono text-sm text-accent">About Me</span>
+            <h2 className="mt-2 font-display text-3xl font-semibold text-text-primary sm:text-4xl">
+              About Me
+            </h2>
+            <p className="mt-4 text-text-muted">
+              I&apos;m Abdullah Al Rafi Bhuiyan, a Full-Stack Web Developer with
+              a Mathematics background. I build responsive, scalable web
+              applications using React, TypeScript, Node.js, and PostgreSQL —
+              with a strong foundation in REST APIs, authentication, and
+              database design.
+            </p>
 
-        <div className="space-y-6">
-          {journeySteps.map((step) => (
-            <div
-              key={step.id}
-              className="grid gap-2 border-l-2 border-border pl-6 sm:grid-cols-[140px_1fr] sm:gap-6"
-            >
-              <span className="font-mono text-xs text-text-faint">
-                {step.period}
-              </span>
-              <p className="text-text-primary">
-                <span className="text-accent">Given</span> {step.given},{" "}
-                <span className="text-accent">then</span> {step.then}.
-              </p>
+            <div className="mt-6">
+              <Button href="/resume.pdf" variant="secondary">
+                Download CV
+              </Button>
             </div>
-          ))}
+          </div>
+
+          {/* Right: info card only */}
+          <div className="rounded-xl border border-border bg-bg-surface p-6">
+            <ul className="space-y-5">
+              {infoRows.map(({ icon: Icon, label, value }) => (
+                <li key={label} className="flex items-center gap-3">
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-border bg-bg">
+                    <Icon size={16} className="text-accent" />
+                  </span>
+                  <div>
+                    <p className="text-xs text-text-faint">{label}</p>
+                    <p className="text-sm font-medium text-text-primary">
+                      {value}
+                    </p>
+                  </div>
+                </li>
+              ))}
+
+              <li className="flex items-center gap-3">
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-border bg-bg">
+                  <Circle size={10} className="fill-green-500 text-green-500" />
+                </span>
+                <div>
+                  <p className="text-xs text-text-faint">Availability</p>
+                  <p className="text-sm font-medium text-text-primary">
+                    Available for work
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>

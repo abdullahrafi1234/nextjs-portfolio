@@ -21,9 +21,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rafi Abdullah | Full Stack Developer",
+  title: "Abdullah Al Rafi Bhuiyan | Full Stack Developer",
   description:
-    "Full Stack Developer with a Mathematics background — building with React, TypeScript, MongoDB & PostgreSQL.",
+    "Full-Stack Web Developer building responsive, scalable web applications with React, TypeScript, Node.js, and PostgreSQL.",
 };
 
 export default function RootLayout({

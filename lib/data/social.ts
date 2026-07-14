@@ -8,12 +8,12 @@ export const socialLinks: SocialLink[] = [
   },
   {
     label: "LinkedIn",
-    url: "https://linkedin.com/in/YOUR-LINKEDIN-USERNAME",
+    url: "https://www.linkedin.com/in/abdullah-al-rafi-bhuiyan/",
     icon: "linkedin",
   },
   {
     label: "Email",
-    url: "mailto:your.email@example.com",
+    url: "mailto: rafibhuiyan1234@gmail.com",
     icon: "mail",
   },
 ];

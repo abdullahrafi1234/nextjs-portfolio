@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const navLinks = [
+  { label: "Home", href: "#top" },
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
@@ -15,7 +16,7 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-bg/80 backdrop-blur-md">
-      <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
+      <nav className="relative mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a
           href="#top"
           className="font-display text-lg font-semibold text-text-primary"
@@ -23,8 +24,7 @@ export function Navbar() {
           Rafi<span className="text-accent">.</span>
         </a>
 
-        {/* Desktop nav */}
-        <ul className="hidden gap-8 font-mono text-sm text-text-muted sm:flex">
+        <ul className="hidden gap-8 font-mono text-sm text-text-muted sm:absolute sm:left-1/2 sm:flex sm:-translate-x-1/2">
           {navLinks.map((link) => (
             <li key={link.href}>
               <a
@@ -37,7 +37,6 @@ export function Navbar() {
           ))}
         </ul>
 
-        {/* Mobile toggle */}
         <button
           className="text-text-primary sm:hidden"
           onClick={() => setOpen(!open)}
@@ -48,7 +47,6 @@ export function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile menu */}
       {open && (
         <ul className="flex flex-col gap-1 border-t border-border px-6 py-4 font-mono text-sm sm:hidden">
           {navLinks.map((link) => (

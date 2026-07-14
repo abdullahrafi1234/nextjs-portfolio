@@ -5,6 +5,7 @@ import { Contact } from "@/components/sections/Contact";
 import { Hero } from "@/components/sections/Hero";
 import { Projects } from "@/components/sections/Projects";
 import { Skills } from "@/components/sections/Skills";
+import { Reveal } from "@/components/ui/Reveal";
 
 export default function Home() {
   return (
@@ -12,10 +13,18 @@ export default function Home() {
       <Navbar />
       <main className="flex-1">
         <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
+        <Reveal>
+          <About />
+        </Reveal>
+        <Reveal>
+          <Skills />
+        </Reveal>
+        <Reveal>
+          <Projects />
+        </Reveal>
+        <Reveal>
+          <Contact />
+        </Reveal>
       </main>
       <Footer />
     </>

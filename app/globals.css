@@ -1,19 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --color-bg: #0b0d10;
-  --color-bg-surface: #12151a;
-  --color-bg-surface-hover: #171b21;
-  --color-border: #22262d;
-  --color-border-hover: #2f3540;
+  --color-bg: #0a0a0f;
+  --color-bg-surface: #12121c;
+  --color-bg-surface-hover: #1a1a28;
+  --color-border: #23232f;
+  --color-border-hover: #2f2f40;
 
-  --color-text-primary: #e7e9ec;
-  --color-text-muted: #8b93a1;
-  --color-text-faint: #5b6472;
+  --color-text-primary: #eceef2;
+  --color-text-muted: #9497a6;
+  --color-text-faint: #5c5f70;
 
-  --color-accent: #e3b341;
-  --color-accent-hover: #f0c766;
-  --color-accent-secondary: #5ec8d8;
+  --color-accent: #6366f1;
+  --color-accent-hover: #7c7ff5;
+  --color-accent-secondary: #8b5cf6;
 }
 
 @theme inline {
@@ -47,26 +47,87 @@ body {
 
 ::selection {
   background-color: var(--color-accent);
-  color: var(--color-bg);
+  color: white;
 }
 
-/* Graph-paper texture — a quiet nod to a mathematics background */
-.grid-texture {
+/* Gradient text for accent names/words */
+.gradient-text {
+  background: linear-gradient(
+    135deg,
+    var(--color-accent),
+    var(--color-accent-secondary)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Soft glow blob behind hero image */
+.glow-blob {
+  background: radial-gradient(
+    circle,
+    var(--color-accent) 0%,
+    var(--color-accent-secondary) 40%,
+    transparent 70%
+  );
+  filter: blur(80px);
+  opacity: 0.35;
+}
+
+/* Scattered star/dot background, top area */
+.star-field {
   background-image:
-    linear-gradient(to right, var(--color-border) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--color-border) 1px, transparent 1px);
-  background-size: 48px 48px;
-  -webkit-mask-image: radial-gradient(
-    ellipse 60% 50% at 50% 0%,
-    black 40%,
-    transparent 100%
-  );
-  mask-image: radial-gradient(
-    ellipse 60% 50% at 50% 0%,
-    black 40%,
-    transparent 100%
-  );
-  opacity: 0.5;
+    radial-gradient(
+      1.5px 1.5px at 20% 30%,
+      var(--color-text-faint) 50%,
+      transparent 100%
+    ),
+    radial-gradient(
+      1.5px 1.5px at 70% 15%,
+      var(--color-text-faint) 50%,
+      transparent 100%
+    ),
+    radial-gradient(
+      1px 1px at 40% 60%,
+      var(--color-text-faint) 50%,
+      transparent 100%
+    ),
+    radial-gradient(
+      1.5px 1.5px at 85% 45%,
+      var(--color-text-faint) 50%,
+      transparent 100%
+    ),
+    radial-gradient(
+      1px 1px at 55% 80%,
+      var(--color-text-faint) 50%,
+      transparent 100%
+    );
+  opacity: 0.4;
+}
+
+@keyframes skills-marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.skills-marquee {
+  animation: skills-marquee-scroll 50s linear infinite;
+  will-change: transform;
+}
+
+.skills-marquee:hover {
+  animation-play-state: paused;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -76,11 +137,4 @@ body {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-}
-
-a:focus-visible,
-button:focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 3px;
-  border-radius: 4px;
 }
