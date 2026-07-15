@@ -31,7 +31,7 @@ export function Navbar() {
           </span>
         </a>
 
-        <ul className="hidden gap-8 font-mono text-sm text-text-muted sm:absolute sm:left-1/2 sm:flex sm:-translate-x-1/2">
+        <ul className="ml-auto hidden gap-8 pr-4 font-mono text-sm text-text-muted sm:flex">
           {navLinks.map((link) => (
             <li key={link.href}>
               <a

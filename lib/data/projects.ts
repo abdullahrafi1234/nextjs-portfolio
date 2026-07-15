@@ -73,27 +73,49 @@ export const projects: Project[] = [
     ],
     image: "/projects/foody.png",
   },
+  {
+    id: "noteshala",
+    title: "NoteShala",
+    description:
+      "A feature-rich React + TypeScript markdown documentation and notes viewer, built over a 6-month bootcamp. Includes priority-based search, syntax highlighting, and reading progress tracking.",
+    techStack: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+    liveUrl: "https://noteshala-78deb.web.app/",
+    githubUrl: "https://github.com/abdullahrafi1234/noteshala",
+    featured: true,
+    highlights: [
+      "Priority-based search across heading levels",
+      "Shiki + Dracula theme syntax highlighting",
+      "Live reading timer with isolated re-renders",
+      "IntersectionObserver-based Table of Contents",
+      "Bookmarks with dark/light mode support",
+    ],
+    image: "/projects/noteshala.png",
+  },
+  {
+    id: "sleep-well",
+    title: "Sleep Well",
+    description:
+      "A full-stack MERN listings platform with Firebase authentication, built as a client-server project. Users can browse detailed listings with images, pricing, and location, manage a personal dashboard, and interact with a secure Express + MongoDB backend.",
+    techStack: [
+      "React",
+      "Express",
+      "MongoDB",
+      "Firebase Auth",
+      "Tailwind CSS",
+      "DaisyUI",
+    ],
+    liveUrl: "https://ten-assignment-own.web.app/",
+    githubUrl: "https://github.com/abdullahrafi1234/sleep-well-care-client",
+    // githubServerUrl: "https://github.com/abdullahrafi1234/sleep-well-care-server",
+    featured: false,
+    highlights: [
+      "Firebase-based secure user authentication",
+      "Express + MongoDB REST API backend",
+      "Interactive listing cards with Swiper carousel",
+      "Client-side routing with React Router",
+      "SweetAlert2-powered user feedback modals",
+      "Responsive UI built with Tailwind CSS + DaisyUI",
+    ],
+    image: "/projects/sleepwell.png",
+  },
 ];
-
-// import { Project } from "@/lib/types";
-
-// export const projects: Project[] = [
-//   {
-//     id: "noteshala",
-//     title: "NoteShala",
-//     description:
-//       "A feature-rich React + TypeScript markdown documentation and notes viewer, built over a 6-month bootcamp. Includes priority-based search, syntax highlighting, and reading progress tracking.",
-//     techStack: ["React", "TypeScript", "Tailwind CSS", "Vite"],
-//     liveUrl: "",
-//     githubUrl: "https://github.com/abdullahrafi1234/noteshala",
-//     featured: true,
-//     highlights: [
-//       "Priority-based search across heading levels",
-//       "Shiki + Dracula theme syntax highlighting",
-//       "Live reading timer with isolated re-renders",
-//       "IntersectionObserver-based Table of Contents",
-//       "Bookmarks with dark/light mode support",
-//     ],
-//     image: "/projects/noteshala.png",
-//   },
-// ];

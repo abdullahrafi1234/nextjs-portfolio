@@ -1,13 +1,14 @@
 "use client";
 
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { Mail, MapPin, Phone, Send } from "lucide-react";
+import { Loader2, Mail, MapPin, Phone, Send } from "lucide-react";
 import { useState } from "react";
 
 const contactInfo = [
   { icon: Mail, label: "rafibhuiyan1234@gmail.com" },
   { icon: Phone, label: "+880 1722-438145" },
-  { icon: MapPin, label: "Mohammadpur, Dhaka" },
+  { icon: Phone, label: "+880 1568393284" },
+  { icon: MapPin, label: "Tikkapara, Mohammadpur, Dhaka" },
 ];
 
 export function Contact() {
@@ -17,16 +18,32 @@ export function Contact() {
     subject: "",
     message: "",
   });
-  const [status, setStatus] = useState<"idle" | "sent">("idle");
+  const [status, setStatus] = useState<"idle" | "loading" | "sent" | "error">(
+    "idle",
+  );
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    // এখানে পরে EmailJS/Resend integrate করলে actual পাঠানো যাবে
-    setStatus("sent");
+    setStatus("loading");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      if (!res.ok) throw new Error("Failed");
+
+      setStatus("sent");
+      setForm({ name: "", email: "", subject: "", message: "" });
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
-    <section id="contact" className="px-6 py-8">
+    <section id="contact" className="px-6 py-24">
       <div className="mx-auto max-w-5xl">
         <SectionHeading
           eyebrow="Contact Me"
@@ -34,7 +51,7 @@ export function Contact() {
           description="Have a project in mind or want to work together? Feel free to send me a message."
         />
 
-        <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+        <div className="grid gap-8 sm:grid-cols-[0.8fr_1.2fr]">
           <ul className="space-y-4">
             {contactInfo.map(({ icon: Icon, label }) => (
               <li key={label} className="flex items-center gap-3">
@@ -89,18 +106,33 @@ export function Contact() {
 
             <button
               type="submit"
-              className="flex w-full items-center justify-center gap-2 rounded-md px-5 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90"
+              disabled={status === "loading"}
+              className="flex w-full items-center justify-center gap-2 rounded-md px-5 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90 disabled:opacity-60"
               style={{
                 background:
                   "linear-gradient(90deg, var(--color-accent), var(--color-accent-secondary))",
               }}
             >
-              Send Message <Send size={15} />
+              {status === "loading" ? (
+                <>
+                  <Loader2 size={15} className="animate-spin" /> Sending...
+                </>
+              ) : (
+                <>
+                  Send Message <Send size={15} />
+                </>
+              )}
             </button>
 
             {status === "sent" && (
               <p className="text-center text-sm text-accent">
-                Message noted — actual sending needs email integration.
+                Thank you for reaching out — I typically respond within 24
+                hours.
+              </p>
+            )}
+            {status === "error" && (
+              <p className="text-center text-sm text-red-400">
+                Something went wrong. Please try again or email me directly.
               </p>
             )}
           </form>

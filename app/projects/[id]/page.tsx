@@ -101,7 +101,7 @@ export default async function ProjectDetailPage({
                 <h2 className="mt-8 font-display text-xl font-semibold text-text-primary">
                   Features
                 </h2>
-                <div className="mt-4 grid gap-x-6 gap-y-3 sm:grid-cols-2">
+                <div className="mt-4 space-y-3">
                   {project.highlights.map((point) => (
                     <div
                       key={point}
