@@ -70,16 +70,6 @@ export function Hero() {
               priority
             />
           </div>
-          {/* <div className="absolute -bottom-6 -left-8 z-10 flex items-center gap-3 rounded-xl border border-border bg-bg-surface px-5 py-4 shadow-2xl">
-            <span className="font-display text-2xl font-bold text-accent">
-              1+
-            </span>
-            <span className="text-xs leading-tight text-text-muted">
-              Year
-              <br />
-              Learning
-            </span>
-          </div> */}
           <div className="absolute -right-6 -top-6 z-10 rounded-xl border border-border bg-bg-surface p-3.5 shadow-2xl">
             <Code2 size={22} className="text-accent" />
           </div>
