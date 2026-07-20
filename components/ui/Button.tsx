@@ -21,13 +21,21 @@ export function Button({
 
   const styles =
     variant === "primary"
-      ? "bg-accent text-bg hover:bg-accent-hover"
+      ? "text-white hover:opacity-90"
       : "border border-border text-text-primary hover:border-border-hover hover:bg-bg-surface";
 
   return (
     <Link
       href={href}
       className={`${base} ${styles}`}
+      style={
+        variant === "primary"
+          ? {
+              background:
+                "linear-gradient(90deg, var(--color-accent), var(--color-accent-secondary))",
+            }
+          : undefined
+      }
       {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
     >
       {icon}

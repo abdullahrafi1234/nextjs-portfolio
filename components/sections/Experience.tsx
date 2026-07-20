@@ -25,8 +25,10 @@ export function ExperienceSection() {
                 <Badge variant="accent">{exp.type}</Badge>
               </div>
 
-              <p className="mt-2 font-mono text-sm text-text-faint">
-                {exp.organization}
+              <p className="mt-2 flex flex-wrap items-center gap-2 font-mono text-sm text-text-faint">
+                <span>{exp.organization}</span>
+                <span className="text-border"> ||</span>
+                <span>{exp.period}</span>
               </p>
 
               <ul className="mt-4 space-y-1.5">

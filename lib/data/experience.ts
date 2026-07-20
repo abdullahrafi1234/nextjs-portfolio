@@ -4,8 +4,8 @@ export const experiences: Experience[] = [
   {
     id: "advisors-it",
     role: "Computer Instructor",
-    organization: "Advisors IT Institute, Bangladesh",
-    period: "Part-time",
+    organization: "Advisors IT Institute, Dhaka, Bangladesh",
+    period: "July 2025 - March 2026",
     type: "Part-time",
     highlights: [
       "Conducted basic computer training, including Microsoft Word, Excel, PowerPoint, and typing.",
