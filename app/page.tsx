@@ -25,10 +25,10 @@ export default function Home() {
           <Skills />
         </Reveal>
         <Reveal>
-          <GithubActivity />
+          <Projects />
         </Reveal>
         <Reveal>
-          <Projects />
+          <GithubActivity />
         </Reveal>
         <Reveal>
           <Contact />

@@ -13,7 +13,7 @@ export function Projects() {
   return (
     <section id="projects" className="px-6 py-8">
       <div className="mx-auto max-w-5xl">
-        <div className="mb-12 flex flex-wrap items-end justify-between gap-4">
+        <div className="mb-4 flex flex-wrap items-end justify-between gap-4">
           <SectionHeading eyebrow="My Projects" title="Featured Projects" />
           <Button href="#projects" variant="secondary">
             View All Projects
