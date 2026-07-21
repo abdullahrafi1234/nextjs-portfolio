@@ -4,7 +4,7 @@ import { Circle, Mail, MapPin, User } from "lucide-react";
 const infoRows = [
   { icon: User, label: "Name", value: "Abdullah Al Rafi Bhuiyan" },
   { icon: Mail, label: "Email", value: "rafibhuiyan1234@gmail.com" },
-  { icon: MapPin, label: "Location", value: "Mohammadpur, Dhaka" },
+  { icon: MapPin, label: "Location", value: "Mohammadpur, Dhaka, Bangladesh" },
 ];
 
 export function About() {

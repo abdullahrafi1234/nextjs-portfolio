@@ -1,6 +1,5 @@
-"use client";
-
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { TechStackCard } from "@/components/ui/TechStackCard";
 import { skillCategories } from "@/lib/data/skills";
 import Image from "next/image";
 
@@ -11,7 +10,6 @@ export function Skills() {
       categoryLabel: category.label,
     })),
   );
-  const track = [...allSkills, ...allSkills]; // seamless loop এর জন্য duplicate
 
   return (
     <section id="skills" className="px-6 py-8">
@@ -22,47 +20,31 @@ export function Skills() {
           description="A full-stack toolkit spanning frontend, backend, and both SQL & NoSQL databases."
         />
 
-        <div className="relative overflow-hidden">
-          <div className="skills-marquee flex w-max gap-6">
-            {track.map((skill, i) => (
-              <div
-                key={`${skill.name}-${i}`}
-                className="flex w-64 shrink-0 flex-col items-center rounded-xl border border-border bg-bg-surface px-6 py-10 text-center transition-colors hover:border-accent/50"
-              >
+        <div className="grid grid-cols-4 gap-4 sm:grid-cols-5 lg:grid-cols-7">
+          {allSkills.map((skill, index) => (
+            <TechStackCard
+              key={skill.name}
+              icon={
                 <Image
                   src={
-                    skill.icon === "mongoose"
-                      ? `https://cdn.simpleicons.org/mongoose/${skill.color.replace("#", "")}`
+                    skill.name === "Mongoose"
+                      ? "https://cdn.simpleicons.org/mongoose/880000"
                       : `https://skillicons.dev/icons?i=${skill.icon}`
                   }
                   alt={skill.name}
-                  width={80}
-                  height={80}
+                  width={40}
+                  height={40}
                   unoptimized
+                  className="h-10 w-10 transition-transform duration-300 group-hover:scale-125 group-hover:rotate-6"
                 />
-                <p className="mt-5 font-display text-xl font-semibold text-text-primary">
-                  {skill.name}
-                </p>
-                <p className="mt-1 font-mono text-xs text-text-faint">
-                  {skill.categoryLabel}
-                </p>
-
-                <div className="mt-5 h-1.5 w-full overflow-hidden rounded-full bg-bg">
-                  <div
-                    className="h-full rounded-full"
-                    style={{
-                      width: `${skill.level}%`,
-                      background: skill.color,
-                    }}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Edge fade so cards don't look like they cut off abruptly */}
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-linear-to-r from-bg to-transparent" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-linear-to-l from-bg to-transparent" />
+              }
+              title={skill.name}
+              category={skill.categoryLabel}
+              level={skill.level}
+              color={skill.color}
+              delay={index * 80}
+            />
+          ))}
         </div>
       </div>
     </section>

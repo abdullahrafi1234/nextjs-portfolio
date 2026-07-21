@@ -3,6 +3,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { About } from "@/components/sections/About";
 import { Contact } from "@/components/sections/Contact";
 import { ExperienceSection } from "@/components/sections/Experience";
+import { GithubActivity } from "@/components/sections/GithubActivity";
 import { Hero } from "@/components/sections/Hero";
 import { Projects } from "@/components/sections/Projects";
 import { Skills } from "@/components/sections/Skills";
@@ -22,6 +23,9 @@ export default function Home() {
         </Reveal>
         <Reveal>
           <Skills />
+        </Reveal>
+        <Reveal>
+          <GithubActivity />
         </Reveal>
         <Reveal>
           <Projects />

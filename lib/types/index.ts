@@ -35,7 +35,7 @@ export interface Skill {
   name: string;
   icon: string;
   level: number; // 0-100, progress bar এর জন্য
-  color: string; // এই লাইনটা add করো
+  color?: string; // এই লাইনটা add করো
 }
 
 export interface Experience {

@@ -3,36 +3,46 @@ import { ReactNode } from "react";
 interface TechStackCardProps {
   icon: ReactNode;
   title: string;
-  description: string;
+  category: string;
+  level: number;
+  color?: string;
   delay: number;
 }
 
-export const TechStackCard = ({
+export function TechStackCard({
   icon,
   title,
-  description,
+  category,
+  level,
+  color = "var(--color-accent)",
   delay,
-}: TechStackCardProps) => {
+}: TechStackCardProps) {
   return (
     <div
-      className="group relative p-6 rounded-xl border border-border bg-card hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 animate-fade-in-up opacity-0"
+      className="group relative rounded-xl border border-border bg-bg-surface p-4 opacity-0 transition-all duration-300 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/5 animate-fade-in-up"
       style={{ animationDelay: `${delay}ms`, animationFillMode: "forwards" }}
     >
-      <div className="absolute inset-0 rounded-xl bg-linear-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="absolute inset-0 rounded-xl bg-linear-to-br from-accent/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
       <div className="relative flex flex-col items-center text-center">
-        <div className="w-16 h-16 rounded-xl flex items-center justify-center mb-4 bg-muted/30 group-hover:bg-primary/10 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-primary/20 group-hover:scale-110">
+        <div className="mb-3 flex h-10 w-10 items-center justify-center">
           {icon}
         </div>
 
-        <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
+        <h3 className="text-sm font-display font-semibold text-text-primary transition-colors duration-300 group-hover:text-accent">
           {title}
         </h3>
-
-        <p className="text-sm text-muted-foreground leading-relaxed">
-          {description}
+        <p className="mt-0.5 font-mono text-[10px] text-text-faint">
+          {category}
         </p>
+
+        <div className="mt-3 h-1 w-full overflow-hidden rounded-full bg-bg">
+          <div
+            className="h-full rounded-full"
+            style={{ width: `${level}%`, background: color }}
+          />
+        </div>
       </div>
     </div>
   );
-};
+}
