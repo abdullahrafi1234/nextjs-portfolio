@@ -5,7 +5,7 @@ export const skillCategories: SkillCategory[] = [
     id: "frontend",
     label: "Frontend",
     skills: [
-      { name: "Next.js", icon: "nextjs", level: 80, color: "#ffffff" },
+      { name: "Next.js", icon: "nextjs", level: 70, color: "#ffffff" },
       { name: "React", icon: "react", level: 85, color: "#61dafb" },
       { name: "JavaScript", icon: "js", level: 85, color: "#f7df1e" },
       { name: "TypeScript", icon: "ts", level: 80, color: "#3178c6" },
@@ -39,11 +39,11 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       { name: "Git", icon: "git", level: 80, color: "#f05032" },
       { name: "GitHub", icon: "github", level: 80, color: "#ffffff" },
-      { name: "Postman", icon: "postman", level: 75, color: "#ff6c37" },
-      { name: "Firebase", icon: "firebase", level: 65, color: "#ffca28" },
+      // { name: "Postman", icon: "postman", level: 75, color: "#ff6c37" },
+      // { name: "Firebase", icon: "firebase", level: 65, color: "#ffca28" },
       { name: "Vercel", icon: "vercel", level: 75, color: "#ffffff" },
       { name: "Netlify", icon: "netlify", level: 75, color: "#00c7b7" },
-      { name: "Figma", icon: "figma", level: 60, color: "#f24e1e" },
+      // { name: "Figma", icon: "figma", level: 60, color: "#f24e1e" },
     ],
   },
 ];

@@ -20,7 +20,7 @@ export function Skills() {
           description="A full-stack toolkit spanning frontend, backend, and both SQL & NoSQL databases."
         />
 
-        <div className="grid grid-cols-4 gap-4 sm:grid-cols-5 lg:grid-cols-7">
+        <div className="grid grid-cols-3 gap-4 sm:grid-cols-5 lg:grid-cols-7">
           {allSkills.map((skill, index) => (
             <TechStackCard
               key={skill.name}
