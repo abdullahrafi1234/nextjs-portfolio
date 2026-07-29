@@ -1,6 +1,6 @@
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
-const GITHUB_USERNAME = "abdullahrafi1234"; // replace with your real username
+const GITHUB_USERNAME = "abdullahrafi1234";
 
 export function GithubActivity() {
   return (

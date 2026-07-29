@@ -111,7 +111,8 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-border pt-6 sm:flex-row">
           <p className="text-xs text-text-faint">
-            © {new Date().getFullYear()} Rafi Abdullah. All rights reserved.
+            © {new Date().getFullYear()} Abdullah Al Rafi Bhuiyan. All rights
+            reserved.
           </p>
           <p className="text-xs text-text-faint">
             Built with Next.js, TypeScript & Tailwind CSS.
