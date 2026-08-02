@@ -17,12 +17,12 @@ const resources = [
 const connectLinks = [
   {
     label: "GitHub",
-    href: "https://github.com/YOUR-GITHUB-USERNAME",
+    href: "https://github.com/abdullahrafi1234",
     icon: GithubIcon,
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/in/YOUR-LINKEDIN-USERNAME",
+    href: "https://www.linkedin.com/in/abdullah-al-rafi-bhuiyan/",
     icon: LinkedinIcon,
   },
 ];
