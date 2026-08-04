@@ -6,8 +6,8 @@ export const skillCategories: SkillCategory[] = [
     label: "Frontend",
     skills: [
       { name: "Next.js", icon: "nextjs", level: 70, color: "#ffffff" },
-      { name: "React", icon: "react", level: 85, color: "#61dafb" },
-      { name: "JavaScript", icon: "js", level: 85, color: "#f7df1e" },
+      { name: "React", icon: "react", level: 80, color: "#61dafb" },
+      { name: "JavaScript", icon: "js", level: 90, color: "#f7df1e" },
       { name: "TypeScript", icon: "ts", level: 80, color: "#3178c6" },
       { name: "Tailwind CSS", icon: "tailwind", level: 85, color: "#38bdf8" },
       { name: "HTML5", icon: "html", level: 90, color: "#e34f26" },
